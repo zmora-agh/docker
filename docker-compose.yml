@@ -40,6 +40,11 @@ services:
     volumes:
       - rails-data:/opt/zmora-server/public
     restart: always
+  ui:
+    image: zmoraagh/zmora-ui
+    ports:
+      - "3100:80"
+    restart: always
   rabbit-listener:
     image: zmoraagh/zmora-server
     environment:
