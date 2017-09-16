@@ -43,7 +43,7 @@ services:
   ui:
     image: zmoraagh/zmora-ui
     environment:
-      API_URI: "http://api.zmora.agh.edu.pl"
+      API_URI: "http://api.zmora.kis.agh.edu.pl"
     ports:
       - "3100:80"
     restart: always
