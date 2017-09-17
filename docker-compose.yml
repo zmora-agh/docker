@@ -67,6 +67,7 @@ services:
       - whisper:/opt/graphite/storage/whisper
       - grafana:/opt/grafana/data
       - graphite:/opt/graphite/storage/log
+    restart: always
 
 volumes:
   psql-db:
