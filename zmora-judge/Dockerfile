@@ -7,7 +7,7 @@ RUN mkdir /opt/zmora-judge
 
 WORKDIR /opt/zmora-judge
 
-COPY bin/* ./
+COPY bin/* /usr/bin/
 COPY runner/* /usr/bin/
 
 COPY nsjail ./nsjail
@@ -16,4 +16,4 @@ RUN cd nsjail && make && mv nsjail /usr/bin && cd .. && rm -rf nsjail
 
 STOPSIGNAL SIGTERM
 
-CMD ["./zmora-judge", "$ZMORA_RABBITMQ_URI"]
+CMD ["zmora-judge", "$ZMORA_RABBITMQ_URI"]
