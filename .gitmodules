@@ -1,0 +1,3 @@
+[submodule "zmora-judge/nsjail"]
+	path = zmora-judge/nsjail
+	url = https://github.com/google/nsjail.git
