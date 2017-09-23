@@ -18,9 +18,7 @@ services:
       RABBITMQ_DEFAULT_USER: zmora
       RABBITMQ_DEFAULT_PASS: szatan
     ports:
-      - "5671:5671"
-      - "5672:5672"
-      - "15672:15672"
+      - "127.0.0.1:15672:15672"
     volumes:
       - rabbitmq:/var/lib/rabbitmq
     restart: always
@@ -36,7 +34,7 @@ services:
       GRAPHITE_URI: "grafana_graphite:2003"
       SECRET_KEY_BASE: d8efe34de6c2d4bcdd8a6c212f04f90068b37d314c69837cb7ca63e15863829d8ba64d77343d6a77bff717ab90c27360b9719c4d15991977109853b84490e8f4
     ports:
-      - "3000:80"
+      - "127.0.0.1:3000:80"
     volumes:
       - rails-data:/opt/zmora-server/public
     restart: always
@@ -45,7 +43,7 @@ services:
     environment:
       API_URI: "http://api.zmora.kis.agh.edu.pl"
     ports:
-      - "3100:80"
+      - "127.0.0.1:3100:80"
     restart: always
   rabbit-listener:
     image: zmoraagh/zmora-server
@@ -62,7 +60,7 @@ services:
   grafana_graphite:
     image: zmoraagh/graphite
     ports:
-      - '3200:80'
+      - '127.0.0.1:3200:80'
     volumes:
       - whisper:/opt/graphite/storage/whisper
       - grafana:/opt/grafana/data
