@@ -31,6 +31,7 @@ services:
       ZMORA_DB_PASSWORD: szatan
       ZMORA_DB_NAME: zmora
       ZMORA_RABBITMQ_URI: "amqp://zmora:szatan@rabbitmq"
+      SENTRY_DSN: "off"
       GRAPHITE_URI: "grafana_graphite:2003"
       SECRET_KEY_BASE: d8efe34de6c2d4bcdd8a6c212f04f90068b37d314c69837cb7ca63e15863829d8ba64d77343d6a77bff717ab90c27360b9719c4d15991977109853b84490e8f4
     ports:
@@ -53,6 +54,7 @@ services:
       ZMORA_DB_PASSWORD: szatan
       ZMORA_DB_NAME: zmora
       ZMORA_RABBITMQ_URI: "amqp://zmora:szatan@rabbitmq"
+      SENTRY_DSN: "off"
       GRAPHITE_URI: "grafana_graphite:2003"
       SECRET_KEY_BASE: d8efe34de6c2d4bcdd8a6c212f04f90068b37d314c69837cb7ca63e15863829d8ba64d77343d6a77bff717ab90c27360b9719c4d15991977109853b84490e8f4
     command: bundle exec -- ./bin/rake zmora:listen_rabbit RAILS_ENV=production
