@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 
 RUN apt-get update \
-  && apt-get install -qq -y build-essential cmake bison flex git pkg-config libcap-dev libprotobuf-dev protobuf-compiler --fix-missing --no-install-recommends
+  && apt-get install -qq -y build-essential cmake bison flex git pkg-config libcap-dev libprotobuf-dev protobuf-compiler netbase --fix-missing --no-install-recommends
 
 RUN mkdir /opt/zmora-judge
 
